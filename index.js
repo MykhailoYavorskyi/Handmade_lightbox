@@ -1,37 +1,37 @@
 const images = [
   {
-    source: "https://source.unsplash.com/400x400?sky",
+    source: "https://source.unsplash.com/600x600?sky",
     descr: "sky",
   },
   {
-    source: "https://source.unsplash.com/400x400?beach",
+    source: "https://source.unsplash.com/600x600?beach",
     descr: "beach",
   },
   {
-    source: "https://source.unsplash.com/400x400?mountain",
+    source: "https://source.unsplash.com/600x600?mountain",
     descr: "mountain",
   },
   {
-    source: "https://source.unsplash.com/400x400?nature",
+    source: "https://source.unsplash.com/600x600?nature",
     descr: "nature",
   },
   {
-    source: "https://source.unsplash.com/400x400?night",
+    source: "https://source.unsplash.com/600x600?night",
     descr: "night",
   },
   {
-    source: "https://source.unsplash.com/400x400?desert",
+    source: "https://source.unsplash.com/600x600?desert",
     descr: "desert",
   },
   {
-    source: "https://source.unsplash.com/400x400?road",
+    source: "https://source.unsplash.com/600x600?road",
     descr: "road",
   },
   {
-    source: "https://source.unsplash.com/400x400?trees",
+    source: "https://source.unsplash.com/600x600?trees",
     descr: "trees",
   },
-  { source: "https://source.unsplash.com/400x400?sea", descr: "sea" },
+  { source: "https://source.unsplash.com/600x600?sea", descr: "sea" },
 ];
 
 const imgMarkup = images.map(({ source, descr }) => `<img src="${source}" alt="${descr}" />`).join("");
