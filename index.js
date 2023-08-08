@@ -48,18 +48,23 @@ boxRef.addEventListener("click", onClick);
 lightbox.addEventListener("click", (e) => {
   if (e.target !== e.currentTarget) return;
   lightbox.classList.remove("active");
+  document.body.style.overflow = "auto";
   document.removeEventListener("keydown", onEsc);
 });
 
 function onClick(e) {
   if (e.target === e.currentTarget || e.target === lightbox) return;
+
   lightbox.classList.add("active");
   const img = document.createElement("img");
   img.src = e.target.src;
+
   while (lightbox.firstChild) {
     lightbox.removeChild(lightbox.firstChild);
   }
   lightbox.append(img);
+
+  document.body.style.overflow = "hidden";
 
   if (lightbox.classList.contains("active")) {
     document.addEventListener("keydown", onEsc);
@@ -70,6 +75,7 @@ function onEsc(e) {
   console.log(e.code);
   if (e.code === "Escape") {
     lightbox.classList.remove("active");
+    document.body.style.overflow = "auto";
     document.removeEventListener("keydown", onEsc);
   }
 }
