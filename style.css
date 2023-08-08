@@ -1,7 +1,6 @@
 body {
   width: 930px;
-  margin-right: auto;
-  margin-left: auto;
+  margin: 0 auto;
 }
 
 .box {
